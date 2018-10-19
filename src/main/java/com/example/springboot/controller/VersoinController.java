@@ -1,14 +1,14 @@
 package com.example.springboot.controller;
 
 
-import com.mchain.mybitt.other.base.Constant;
-import com.mchain.mybitt.other.base.ConstantEnum;
-import com.mchain.mybitt.other.dto.request.GetVersoinRequest;
-import com.mchain.mybitt.other.dto.response.ReturnMessage;
-import com.mchain.mybitt.other.dto.response.VersoinResponse;
-import com.mchain.mybitt.other.entity.Versoin;
-import com.mchain.mybitt.other.entity.VersoinRequest;
-import com.mchain.mybitt.other.service.VersoinService;
+import com.example.springboot.contants.Constant;
+import com.example.springboot.contants.ConstantEnum;
+import com.example.springboot.dto.request.GetVersoinRequest;
+import com.example.springboot.dto.request.VersoinRequest;
+import com.example.springboot.dto.response.ReturnMessage;
+import com.example.springboot.dto.response.VersoinResponse;
+import com.example.springboot.model.Versoin;
+import com.example.springboot.service.VersoinService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;

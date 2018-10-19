@@ -1,14 +1,14 @@
 package com.example.springboot.service.impl;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.mchain.mybitt.other.dto.response.VersoinResponse;
-import com.mchain.mybitt.other.entity.Page;
-import com.mchain.mybitt.other.entity.Versoin;
-import com.mchain.mybitt.other.entity.VersoinLanguage;
-import com.mchain.mybitt.other.entity.VersoinRequest;
-import com.mchain.mybitt.other.mapper.VersoinLanguageMapper;
-import com.mchain.mybitt.other.mapper.VersoinMapper;
-import com.mchain.mybitt.other.service.VersoinService;
+import com.example.springboot.dto.request.VersoinRequest;
+import com.example.springboot.dto.response.VersoinResponse;
+import com.example.springboot.mapper.VersoinLanguageMapper;
+import com.example.springboot.mapper.VersoinMapper;
+import com.example.springboot.model.Page;
+import com.example.springboot.model.Versoin;
+import com.example.springboot.model.VersoinLanguage;
+import com.example.springboot.service.VersoinService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

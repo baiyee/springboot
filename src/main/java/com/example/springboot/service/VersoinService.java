@@ -1,9 +1,9 @@
 package com.example.springboot.service;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.mchain.mybitt.other.dto.response.VersoinResponse;
-import com.mchain.mybitt.other.entity.Versoin;
-import com.mchain.mybitt.other.entity.VersoinRequest;
+import com.example.springboot.dto.request.VersoinRequest;
+import com.example.springboot.dto.response.VersoinResponse;
+import com.example.springboot.model.Versoin;
 
 /**
  * <p>

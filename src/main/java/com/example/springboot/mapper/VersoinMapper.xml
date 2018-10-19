@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mchain.mybitt.other.mapper.VersoinMapper">
+<mapper namespace="com.example.springboot.mapper.VersoinMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.mchain.mybitt.other.entity.Versoin">
+    <resultMap id="BaseResultMap" type="com.example.springboot.model.Versoin">
         <id column="id" property="id"/>
         <result column="versoin" property="versoin"/>
         <result column="coinTypeVersion" property="coinTypeVersion"/>
@@ -17,7 +17,7 @@
         <result column="updateUrl" property="updateUrl"/>
     </resultMap>
 
-    <select id="searchVersoinInfoWithSystem" resultType="com.mchain.mybitt.other.entity.Versoin" parameterType="String">
+    <select id="searchVersoinInfoWithSystem" resultType="com.example.springboot.model.Versoin" parameterType="String">
       SELECT id,coinTypeVersion,versoin,system,isforce,description,url,packageSize,updateDate,content,updateUrl FROM tb_versoin WHERE system = #{system} limit 1
     </select>
 
@@ -26,7 +26,7 @@
 		set v.coinTypeVersion = v.coinTypeVersion+1
 	</update>
 
-    <update id="updateVersoin" parameterType="com.mchain.mybitt.other.entity.Versoin">
+    <update id="updateVersoin" parameterType="com.example.springboot.model.Versoin">
         update tb_versoin v
         set
         <if test="coinTypeVersion != null">
@@ -51,7 +51,7 @@
         where ID = #{id}
     </update>
 
-    <select id="selectVersoinList" resultType="com.mchain.mybitt.other.entity.VersoinRequest">
+    <select id="selectVersoinList" resultType="com.example.springboot.dto.request.VersoinRequest">
         select v.id,v.coinTypeVersion,v.versoin,v.system,v.isforce,v.url,v.packageSize,v.updateDate,v.updateUrl,
         l.description ,l.content,l.locale
         from tb_versoin v left join tb_versoin_language l on v.id = l.versoinId

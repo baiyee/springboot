@@ -2,8 +2,8 @@ package com.example.springboot.mapper;
 
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
-import com.mchain.mybitt.other.entity.Versoin;
-import com.mchain.mybitt.other.entity.VersoinRequest;
+import com.example.springboot.dto.request.VersoinRequest;
+import com.example.springboot.model.Versoin;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
