@@ -2,7 +2,6 @@ package com.example.springboot.controller;
 
 import com.example.springboot.entity.RedisModel;
 import com.example.springboot.service.IRedisService;
-import com.example.springboot.service.impl.RedisServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2018/8/30 16:47
  */
 @RestController
+@RequestMapping(value = "redis")
 public class TestRedisController {
 
     @Autowired
