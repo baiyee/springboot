@@ -1,0 +1,35 @@
+####服务端口号
+#server:
+#  port: 8100
+###定义服务名称
+#spring:
+#  application:
+#    name: spring-boot
+#eureka:
+#  instance:
+#    ##注册中心ip地址
+#    defaultZone: http://${eureka.instance.hostname}:8100/eureka.insatance.hostname}:8100/eureka/
+#    #####因为自己是注册中心，是否需要将自己注册给自己的注册中心（集群的时候都是要将自己注册给自己的注册中心（集群的时候需要的是true））
+#    register-with-eureka: false
+#    ###因为自己是注册中心，不需要去检索服务信息
+#    fetch-register: false
+#
+#  server:
+#    # 测试时关闭自我保护机制，保证不可用服务及时踢出
+#    enable-self-preservation: false
+#    eviction-interval-timer-in-ms: 2000
+
+### 开启hystrix 熔断器
+# feign:
+#   hystrix:
+#     enabled: true
+
+### 禁止hystrix 超时时间 防止 hystrix 熔断降级的方法 超时 没有给客户端及时返回信息
+### 导致走fallback 降级的方法 但是业务还是在执行
+# hystrix:
+#   command:
+#    default:
+#      execution:
+#        timeout:
+#          enable: false
+memberName: zhangsan
