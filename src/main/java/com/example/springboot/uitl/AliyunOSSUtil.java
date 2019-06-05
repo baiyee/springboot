@@ -3,17 +3,16 @@ package com.example.springboot.uitl;
 import com.aliyun.oss.ClientException;
 import com.aliyun.oss.OSSClient;
 import com.aliyun.oss.OSSException;
-import com.aliyun.oss.model.CannedAccessControlList;
-import com.aliyun.oss.model.CreateBucketRequest;
-import com.aliyun.oss.model.PutObjectRequest;
-import com.aliyun.oss.model.PutObjectResult;
+import com.aliyun.oss.model.*;
 import com.example.springboot.config.ConstantProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -31,7 +30,14 @@ import java.util.UUID;
 public class AliyunOSSUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(AliyunOSSUtil.class);
+    private static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
+    /**
+     * oss 文件上传
+     *
+     * @param file
+     * @return
+     */
     public static String upload(File file) {
         logger.info("==========》OSS文件上传开始：" + file.getName());
         String endpoint = ConstantProperties.OSS_END_POINT;
@@ -93,14 +99,51 @@ public class AliyunOSSUtil {
         String accessKeyId = ConstantProperties.OSS_ACCESS_KEY_ID;
         String accessKeySecret = ConstantProperties.OSS_ACCESS_KEY_SECRET;
         String bucketName = ConstantProperties.OSS_BUCKET_NAME1;
-        String fileHost = ConstantProperties.OSS_FILE_HOST;
         try {
+            OSSClient ossClient = new OSSClient(endpoint, accessKeyId, accessKeySecret);
 
+            if (!ossClient.doesBucketExist(bucketName)) {
+                logger.info("==============》您的Bucket不存在");
+                return "您的bucket不存在";
+            } else {
+                logger.info("==============》开始删除 Object");
+                ossClient.deleteObject(bucketName, fileKey);
+                logger.info("==============》Object 删除成功：" + fileKey);
+                return "==============》Object 删除成功：" + fileKey;
+            }
         } catch (Exception ex) {
-            logger.error("");
+            logger.error("删除" + fileKey + "失败", ex);
+            return "删除" + fileKey + "失败";
         }
-        return null;
     }
 
 
+    /**
+     * 查询文件名列表
+     *
+     * @param bucketName
+     * @return
+     */
+    public static List<String> getObjectList(String bucketName) {
+        List<String> listRe = new ArrayList<>();
+        String endpoint = ConstantProperties.OSS_END_POINT;
+        String accessKeyId = ConstantProperties.OSS_ACCESS_KEY_ID;
+        String accessKeySecret = ConstantProperties.OSS_ACCESS_KEY_SECRET;
+        try {
+            logger.info("==============》开始查询文件名列表");
+            OSSClient ossClient = new OSSClient(endpoint, accessKeyId, accessKeySecret);
+            ListObjectsRequest listObjectsRequest = new ListObjectsRequest(bucketName);
+            //列出blog目录下今天所有文件
+            listObjectsRequest.setPrefix("blog/" + format.format(new Date()) + "/");
+            ObjectListing list = ossClient.listObjects(listObjectsRequest);
+            for (OSSObjectSummary ossObjectSummary : list.getObjectSummaries()) {
+                listRe.add(ossObjectSummary.getKey());
+            }
+            logger.info("list =" + listRe);
+            return listRe;
+        } catch (Exception ex) {
+            logger.info("==============》查询列表失败", ex);
+            return new ArrayList<>();
+        }
+    }
 }
