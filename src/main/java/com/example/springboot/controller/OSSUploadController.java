@@ -31,9 +31,9 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("upload")
-public class UploadController {
+public class OSSUploadController {
 
-    private final Logger logger = LoggerFactory.getLogger(UploadController.class);
+    private final Logger logger = LoggerFactory.getLogger(OSSUploadController.class);
 
     @GetMapping(value = "/toUploadPage")
     public String toUploadPage() {
