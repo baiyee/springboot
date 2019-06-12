@@ -1,4 +1,4 @@
-package com.example.springboot.ChangeVideoType;
+package com.example.springboot.changeVideoType;
 
 public class Constants {
 	//ffmpeg存放的路径(mac 本地)

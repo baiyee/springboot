@@ -1,9 +1,12 @@
-package com.example.springboot.ChangeVideoType;
+package com.example.springboot.changeVideoType;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 视频格式转换
+ */
 public class ChangeVideo {
 	public static void main(String[] args) {
 		ChangeVideo.convert("/Users/xinye/Desktop/live.mp4", "/Users/xinye/Desktop/live_flv.flv");
