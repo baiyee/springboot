@@ -20,9 +20,12 @@ import static com.example.springboot.uitl.changevideo.enums.PresetVauleEnum.*;
  */
 public class TestVideoChangeTransCode {
     public static void main(String[] args) {
-        File fileInput = new File("/Users/xinye/Documents/live.mp4");
-        File fileOutput = new File("/Users/xinye/Documents/live_mp4_second.mp4");
-        MediaUtil.convertVideo(fileInput,fileOutput,false,
-                28,MEDIUM_ZIP_SPEED.getPresetValue(),null,null);
+//        File fileInput = new File("/Users/xinye/Documents/live.mp4");
+//        File fileOutput = new File("/Users/xinye/Documents/live_mp4_second.mp4");
+//        MediaUtil.convertVideo(fileInput,fileOutput,false,
+//                28,MEDIUM_ZIP_SPEED.getPresetValue(),null,null);
+        String name = "刺梦.suv.ant.mv.mp4";
+        System.out.println(name.substring(name.lastIndexOf(".")+1));
+
     }
 }
