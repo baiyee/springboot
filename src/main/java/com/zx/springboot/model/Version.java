@@ -17,7 +17,7 @@ import java.util.Date;
  * @since 2018-05-28
  */
 @TableName("tb_versoin")
-public class Versoin extends Model<Versoin> {
+public class Version extends Model<Version> {
 
     private static final long serialVersionUID = 1L;
 
@@ -71,7 +71,7 @@ public class Versoin extends Model<Versoin> {
         return id;
     }
 
-    public Versoin setId(Long id) {
+    public Version setId(Long id) {
         this.id = id;
         return this;
     }
@@ -96,7 +96,7 @@ public class Versoin extends Model<Versoin> {
 		return updateDate;
 	}
 
-	public Versoin setUpdateDate(Date updateDate) {
+	public Version setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
 		return this;
 	}
@@ -105,7 +105,7 @@ public class Versoin extends Model<Versoin> {
 		return packageSize;
 	}
 
-	public Versoin setPackageSize(String packageSize) {
+	public Version setPackageSize(String packageSize) {
 		this.packageSize = packageSize;
 		return this;
 	}
@@ -114,7 +114,7 @@ public class Versoin extends Model<Versoin> {
         return versoin;
     }
 
-    public Versoin setVersoin(String versoin) {
+    public Version setVersoin(String versoin) {
         this.versoin = versoin;
         return this;
     }
@@ -123,7 +123,7 @@ public class Versoin extends Model<Versoin> {
         return coinTypeVersion;
     }
 
-    public Versoin setCoinTypeVersion(String coinTypeVersion) {
+    public Version setCoinTypeVersion(String coinTypeVersion) {
         this.coinTypeVersion = coinTypeVersion;
         return this;
     }
@@ -132,7 +132,7 @@ public class Versoin extends Model<Versoin> {
         return system;
     }
 
-    public Versoin setSystem(String system) {
+    public Version setSystem(String system) {
         this.system = system;
         return this;
     }
@@ -141,7 +141,7 @@ public class Versoin extends Model<Versoin> {
         return isforce;
     }
 
-    public Versoin setIsforce(Integer isforce) {
+    public Version setIsforce(Integer isforce) {
         this.isforce = isforce;
         return this;
     }
@@ -150,7 +150,7 @@ public class Versoin extends Model<Versoin> {
         return description;
     }
 
-    public Versoin setDescription(String description) {
+    public Version setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -159,7 +159,7 @@ public class Versoin extends Model<Versoin> {
         return url;
     }
 
-    public Versoin setUrl(String url) {
+    public Version setUrl(String url) {
         this.url = url;
         return this;
     }

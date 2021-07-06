@@ -4,6 +4,7 @@ package com.zx.springboot.mapper;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.zx.springboot.model.VersoinLanguage;
 import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -14,6 +15,7 @@ import org.apache.ibatis.annotations.Param;
  * @author zhangxuan123
  * @since 2018-09-10
  */
+@Mapper
 public interface VersoinLanguageMapper extends BaseMapper<VersoinLanguage> {
 
     @Delete("delete from tb_versoin_language where versoinId = #{versoinId}")

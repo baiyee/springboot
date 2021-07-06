@@ -1,6 +1,6 @@
 package com.zx.springboot;
 
-import com.zx.springboot.uitl.StringUtil;
+import com.zx.springboot.uitl.core.string.StringUtil;
 
 /**
  * @author xinye

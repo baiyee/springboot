@@ -1,4 +1,4 @@
-package com.zx.springboot.uitl;
+package com.zx.springboot.uitl.core.cloud;
 
 import com.aliyun.oss.ClientException;
 import com.aliyun.oss.OSSClient;

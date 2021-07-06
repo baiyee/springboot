@@ -7,7 +7,7 @@ import com.zx.springboot.dto.request.GetVersoinRequest;
 import com.zx.springboot.dto.request.VersoinRequest;
 import com.zx.springboot.dto.response.ReturnMessage;
 import com.zx.springboot.dto.response.VersoinResponse;
-import com.zx.springboot.model.Versoin;
+import com.zx.springboot.model.Version;
 import com.zx.springboot.service.VersoinService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
@@ -34,8 +34,8 @@ public class VersoinController {
 
     @RequestMapping(value = "/getVersoin", method = RequestMethod.POST)
     public ReturnMessage getVersoin(@RequestBody @Validated GetVersoinRequest requestBody) throws Throwable {
-        Versoin versoin = mVersoinService.searchVersoinInfoWithSystem(requestBody.getSystem());
-        return new ReturnMessage(ReturnMessage.SUCCESS, ConstantEnum.SUCCESS.getCode(),  ConstantEnum.SUCCESS.getCnDetail(), versoin);
+        Version version = mVersoinService.searchVersoinInfoWithSystem(requestBody.getSystem());
+        return new ReturnMessage(ReturnMessage.SUCCESS, ConstantEnum.SUCCESS.getCode(),  ConstantEnum.SUCCESS.getCnDetail(), version);
     }
 
     @RequestMapping(value = "/add")

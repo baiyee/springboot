@@ -1,4 +1,4 @@
-package com.zx.springboot.uitl;
+package com.zx.springboot.uitl.core.redis;
 
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.CollectionUtils;

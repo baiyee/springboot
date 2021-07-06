@@ -3,7 +3,8 @@ package com.zx.springboot.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.zx.springboot.dto.request.VersoinRequest;
-import com.zx.springboot.model.Versoin;
+import com.zx.springboot.model.Version;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -16,13 +17,14 @@ import java.util.List;
  * @author sea123
  * @since 2018-05-28
  */
-public interface VersoinMapper extends BaseMapper<Versoin> {
+@Mapper
+public interface VersoinMapper extends BaseMapper<Version> {
 
-	Versoin searchVersoinInfoWithSystem(String system);
+	Version searchVersoinInfoWithSystem(String system);
 
 	void updateCoinTypeVersion();
 
-    Integer updateVersoin(Versoin versoin);
+    Integer updateVersoin(Version version);
 
     List<VersoinRequest> selectVersoinList(@Param("pageIndex") Integer pageIndex, @Param("pageSize") Integer pageSize);
 

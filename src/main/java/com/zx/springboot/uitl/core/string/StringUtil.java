@@ -1,4 +1,4 @@
-package com.zx.springboot.uitl;
+package com.zx.springboot.uitl.core.string;
 
 import org.apache.commons.lang3.StringUtils;
 

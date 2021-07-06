@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zx.springboot.mapper.VersoinLanguageMapper">
+
+    <insert id="insertLanguage" parameterType="com.zx.springboot.model.VersoinLanguage">
+      insert into tb_versoin_language (versoinId,  description,  content,  `locale`)
+      values(#{versoinId},#{description},#{content},#{locale})
+    </insert>
+
+    <update id="updateLanguageByVid">
+        update tb_versoin_language
+        set
+        <if test="content != null">
+            content = #{content},
+        </if>
+        <if test="description != null">
+            description = #{description}
+        </if>
+        where versoinId = #{versoinId}
+    </update>
+</mapper>

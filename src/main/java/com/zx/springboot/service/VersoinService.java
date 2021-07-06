@@ -3,7 +3,7 @@ package com.zx.springboot.service;
 import com.baomidou.mybatisplus.service.IService;
 import com.zx.springboot.dto.request.VersoinRequest;
 import com.zx.springboot.dto.response.VersoinResponse;
-import com.zx.springboot.model.Versoin;
+import com.zx.springboot.model.Version;
 
 /**
  * <p>
@@ -13,13 +13,13 @@ import com.zx.springboot.model.Versoin;
  * @author sea123
  * @since 2018-03-23
  */
-public interface VersoinService extends IService<Versoin> {
+public interface VersoinService extends IService<Version> {
 	/**
 	 * 根据平台系统获取版本升级信息
 	 * @param
 	 * @return
 	 */
-	public Versoin searchVersoinInfoWithSystem(String system);
+	public Version searchVersoinInfoWithSystem(String system);
 	
 	public void updateCoinTypeVersion();
 

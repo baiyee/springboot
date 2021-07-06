@@ -6,10 +6,9 @@ import com.zx.springboot.dto.response.VersoinResponse;
 import com.zx.springboot.mapper.VersoinLanguageMapper;
 import com.zx.springboot.mapper.VersoinMapper;
 import com.zx.springboot.model.Page;
-import com.zx.springboot.model.Versoin;
+import com.zx.springboot.model.Version;
 import com.zx.springboot.model.VersoinLanguage;
 import com.zx.springboot.service.VersoinService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,15 +23,15 @@ import java.util.List;
  * @since 2018-03-23
  */
 @Service
-public class VersoinServiceImpl extends ServiceImpl<VersoinMapper, Versoin> implements VersoinService {
-    @Autowired
+public class VersoinServiceImpl extends ServiceImpl<VersoinMapper, Version> implements VersoinService {
+    // @Autowired
     private VersoinMapper mVersoinMapper;
 
-    @Autowired
+    // @Autowired
     private VersoinLanguageMapper languageMapper;
 
     @Override
-    public Versoin searchVersoinInfoWithSystem(String system) {
+    public Version searchVersoinInfoWithSystem(String system) {
         return mVersoinMapper.searchVersoinInfoWithSystem(system);
     }
 
@@ -45,17 +44,17 @@ public class VersoinServiceImpl extends ServiceImpl<VersoinMapper, Versoin> impl
     @Override
     public Boolean addVersoin(VersoinRequest request){
         Integer result;
-        Versoin versoin = new Versoin();
-        versoin.setId(request.getId()).setVersoin(request.getVersoin()).setCoinTypeVersion(request.getCoinTypeVersion())
+        Version version = new Version();
+        version.setId(request.getId()).setVersoin(request.getVersoin()).setCoinTypeVersion(request.getCoinTypeVersion())
                 .setSystem(request.getSystem()).setIsforce(request.getIsforce()).setUrl(request.getUrl())
                 .setPackageSize(request.getPackageSize()).setUpdateDate(request.getUpdateDate())
                 .setUpdateUrl(request.getUpdateUrl());
-        result = mVersoinMapper.insert(versoin);
-        if (versoin.getId() == null) {
+        result = mVersoinMapper.insert(version);
+        if (version.getId() == null) {
             return false;
         }
         VersoinLanguage language = new VersoinLanguage();
-        language.setVersoinId(versoin.getId());
+        language.setVersoinId(version.getId());
         language.setContent(request.getContent());
         language.setDescription(request.getDescription());
         language.setLocale(request.getLocale());
@@ -84,12 +83,12 @@ public class VersoinServiceImpl extends ServiceImpl<VersoinMapper, Versoin> impl
     @Override
     public Boolean updateAllById(VersoinRequest request) {
         Integer result;
-        Versoin versoin = new Versoin();
-        versoin.setId(request.getId()).setCoinTypeVersion(request.getCoinTypeVersion())
+        Version version = new Version();
+        version.setId(request.getId()).setCoinTypeVersion(request.getCoinTypeVersion())
                 .setSystem(request.getSystem()).setIsforce(request.getIsforce()).setUrl(request.getUrl())
                 .setPackageSize(request.getPackageSize()).setUpdateDate(request.getUpdateDate())
                 .setUpdateUrl(request.getUpdateUrl());
-        result = mVersoinMapper.updateVersoin(versoin);
+        result = mVersoinMapper.updateVersoin(version);
         Long versoinId = request.getId();
         result = languageMapper.updateLanguageByVid(versoinId,request.getContent(),request.getDescription());
         if (result == 0) {

@@ -1,7 +1,7 @@
 package com.zx.springboot.controller;
 
 import com.zx.springboot.config.ConstantProperties;
-import com.zx.springboot.uitl.AliyunOSSUtil;
+import com.zx.springboot.uitl.core.cloud.AliyunOSSUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
