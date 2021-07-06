@@ -2,7 +2,6 @@ package com.zx.springboot.org.course.util;
 
 import com.zx.springboot.org.course.message.resp.Article;
 import com.zx.springboot.org.course.message.resp.Music;
-import com.example.springboot.org.course.pojo.*;
 import com.zx.springboot.org.course.pojo.*;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
@@ -342,8 +341,9 @@ public class AdvancedUtil {
 			FileOutputStream fos = new FileOutputStream(new File(filePath));
 			byte[] buf = new byte[8096];
 			int size = 0;
-			while ((size = bis.read(buf)) != -1)
+			while ((size = bis.read(buf)) != -1) {
 				fos.write(buf, 0, size);
+			}
 			fos.close();
 			bis.close();
 
@@ -418,8 +418,9 @@ public class AdvancedUtil {
 	public static WeixinUserList getUserList(String accessToken, String nextOpenId) {
 		WeixinUserList weixinUserList = null;
 
-		if (null == nextOpenId)
+		if (null == nextOpenId) {
 			nextOpenId = "";
+		}
 
 		// 拼接请求地址
 		String requestUrl = "https://api.weixin.qq.com/cgi-bin/user/get?access_token=ACCESS_TOKEN&next_openid=NEXT_OPENID";
@@ -641,10 +642,11 @@ public class AdvancedUtil {
 			weixinMedia = new WeixinMedia();
 			weixinMedia.setType(jsonObject.getString("type"));
 			// type等于thumb时的返回结果和其它类型不一样
-			if ("thumb".equals(type))
+			if ("thumb".equals(type)) {
 				weixinMedia.setMediaId(jsonObject.getString("thumb_media_id"));
-			else
+			} else {
 				weixinMedia.setMediaId(jsonObject.getString("media_id"));
+			}
 			weixinMedia.setCreatedAt(jsonObject.getInt("created_at"));
 		} catch (Exception e) {
 			weixinMedia = null;
@@ -685,8 +687,9 @@ public class AdvancedUtil {
 			FileOutputStream fos = new FileOutputStream(new File(filePath));
 			byte[] buf = new byte[8096];
 			int size = 0;
-			while ((size = bis.read(buf)) != -1)
+			while ((size = bis.read(buf)) != -1) {
 				fos.write(buf, 0, size);
+			}
 			fos.close();
 			bis.close();
 

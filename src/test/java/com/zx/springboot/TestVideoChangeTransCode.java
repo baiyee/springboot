@@ -1,12 +1,14 @@
 package com.zx.springboot;
 
+import com.zx.springboot.uitl.StringUtil;
+
 /**
  * @author xinye
  * @version 1.0.0
  * <p>
  * ----------------------------------------------------------------------------
  * modifyer    modifyTime                 comment
- * ----------------------------------------------------------------------------
+ * ----------------------------------S------------------------------------------
  * </p>
  * @ClassName: TestVideoChangeTransCode
  * @Description: testVideoChangeTransCode
@@ -19,7 +21,10 @@ public class TestVideoChangeTransCode {
 //        MediaUtil.convertVideo(fileInput,fileOutput,false,
 //                28,MEDIUM_ZIP_SPEED.getPresetValue(),null,null);
         String name = "刺梦.suv.ant.mv.mp4";
-        System.out.println(name.substring(name.lastIndexOf(".")+1));
+        System.out.println(name.substring(name.lastIndexOf(".") + 1));
+        System.out.println(StringUtil.ReplaceLastString("6868,,,,,", ";"));
 
     }
+
+
 }

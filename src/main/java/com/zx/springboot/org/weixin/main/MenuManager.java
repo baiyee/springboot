@@ -1,6 +1,5 @@
 package com.zx.springboot.org.weixin.main;
 
-import com.example.springboot.org.course.menu.*;
 import com.zx.springboot.org.course.pojo.Token;
 import com.zx.springboot.org.course.util.MenuUtil;
 import com.zx.springboot.org.course.menu.*;
