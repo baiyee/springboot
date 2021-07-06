@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by xiongyikai on 2018/1/31.
+ * Created by zhangxuan on 2018/1/31.
  */
 public class Constant {
 

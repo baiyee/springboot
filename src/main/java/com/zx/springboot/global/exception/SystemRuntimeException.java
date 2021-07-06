@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 
 /**
- * @author vincentdeng
+ * @author zhangxuan
  *
  */
 public class SystemRuntimeException extends RuntimeException {

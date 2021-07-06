@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 
 /**
- * Created by Alex on 2014/9/3
+ * Created by zhangxuan on 2014/9/3
  */
 public class BusinessLogicException extends Exception {
 	

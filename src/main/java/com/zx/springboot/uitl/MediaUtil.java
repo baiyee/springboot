@@ -1,9 +1,10 @@
 package com.zx.springboot.uitl;
 
-import com.zx.springboot.uitl.changevideo.entity.ImageMetaInfo;
-import com.zx.springboot.uitl.changevideo.entity.MusicMetaInfo;
-import com.zx.springboot.uitl.changevideo.entity.VideoMetaInfo;
-import com.zx.springboot.uitl.changevideo.gif.AnimatedGifEncoder;
+
+import com.zx.springboot.utils.changevideo.entity.ImageMetaInfo;
+import com.zx.springboot.utils.changevideo.entity.MusicMetaInfo;
+import com.zx.springboot.utils.changevideo.entity.VideoMetaInfo;
+import com.zx.springboot.utils.changevideo.gif.AnimatedGifEncoder;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.io.FileUtils;
