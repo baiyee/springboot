@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mchain.mybitt.mapper.UserMapper">
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
+<!--<mapper namespace="com.mchain.mybitt.mapper.UserMapper">-->
 
-    <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.mchain.mybitt.model.User">
-        <id column="id" property="id" />
-        <result column="name" property="name" />
-        <result column="password" property="password" />
-        <result column="age" property="age" />
-        <result column="phoneNum" property="phoneNum" />
-        <result column="address" property="address" />
-    </resultMap>
+<!--    &lt;!&ndash; 通用查询映射结果 &ndash;&gt;-->
+<!--    <resultMap id="BaseResultMap" type="com.mchain.mybitt.model.User">-->
+<!--        <id column="id" property="id" />-->
+<!--        <result column="name" property="name" />-->
+<!--        <result column="password" property="password" />-->
+<!--        <result column="age" property="age" />-->
+<!--        <result column="phoneNum" property="phoneNum" />-->
+<!--        <result column="address" property="address" />-->
+<!--    </resultMap>-->
 
-</mapper>
+<!--</mapper>-->
