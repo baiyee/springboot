@@ -10,7 +10,7 @@ import java.io.*;
  * @date 2021/7/12
  * @author zhangxuan
  */
-public class MyBufferStream {
+public class MyBufferStreamTest {
     public static void main(String[] args) throws IOException {
         /**
          * BOS--FOS--f4
