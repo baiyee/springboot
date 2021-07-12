@@ -1,0 +1,39 @@
+• ASC-II
+  0-127
+  英文字符、标点
+• iso-8859-1，latin-1
+  160-255
+  西欧字符
+• GB2312
+  0到65535
+  中文 7k+
+  (不包含)喆,镕
+• GBK
+  包含 20902个中文
+• Unicode
+  统一码，万国码
+  包含100万+
+  常用表，双字节
+  生僻字、三字节、四字节
+• UTF-8
+  Unicode Transfer Format
+  Unicode 传输格式
+
+  英文，单字节
+  某些字符，双字节
+  中文，三字节
+
+• Java的char类型字符，采用Unicode编码
+   'a' '\u9961'
+   '中' '\u4e2d'
+• Java的字符编码转换
+ ▪ Unicode 转其他编码
+  ★ s.getBytes()
+  ★ Unicode转指定的编码
+  ★ 返回byte[]数组
+ ▪ 其他编码转Unicode
+  ★ new String(byte[])
+   从系统默认编码转Unicode
+  ★ new String(byte[],"UTF-8")
+   从指定编码转Unicode
+
