@@ -1,0 +1,107 @@
+• Object
+ ▪ toString()
+ ▪ equals()
+ ▪ hashcode()
+• 字符串
+ ▪ 封装char[] 数组
+ ▪ 常量池
+ ▪ 不可变
+  ★ length(), charAt(),getBytes(),indexOf(),trim(),toLower(),match(),replace(),split()
+ ▪ SpringBuffer/SpringBuilder 代替字符串做高效数据连接
+ ▪ SpringBuffer 安全
+ ▪ SpringBuilder 不安全
+• 数字
+ ▪ 基本类型包装类
+  ★ Integer.valueOf()
+   ◆ -128 到 +127，访问缓存数组已存在的对象
+   ◆ 范围外,新建
+  ★ 自动拆箱 自动包箱
+ ▪ BigDecimal/BigInteger
+  ★ 精确浮点数运算
+  ★ 超大整数运算
+• 日期
+ ▪ Date
+  ★ 封装毫秒值
+  ★ getTime()/setTime()
+ ▪ SimpleDateFormat
+  ★ 日期格式化工具
+  ★ format(date) 格式化成字符串
+  ★ parse(字符串) 解析成Date
+• 集合
+ ▪ ArrayList
+  ★ 内部是数组
+  ★ 默认初始长度10
+  ★ 扩容是1.5倍增长
+  ★ 访问任意位置效率高，增删效率可能降低
+ ▪ LinkList
+  ★ 双向链表
+  ★ 两段效率高
+  ★ 仅在两段操作数据，使用
+  ★ add(),get(i),remove(),size(),getFirst(),setFirst(),addLast(),removeFirst(),removeLast()
+ ▪ HashMap
+  ★ 哈希表 存放键值对
+  ★ 作用: 快速查找
+  ★ 存放顺序：无序 散列表
+  ★ 同时重写 hashCode() 和equals()方法
+   ◆ equals()相等,hashCode()必须相同
+   ◆ equals()不相等，hashCode()尽量不相同
+  ★ 哈希算法
+   ◆ 获得键的哈希值
+   ◆ 根据哈希值算出哈希code key.hashCode()
+   ◆ 封装Entry对象
+   ◆ Entry对象放入Index位置
+    • 有空位，直接放入
+    • 有数据，equals 方法比较
+    • 找到相等的key，值覆盖
+    • 没有的key，链表连接在一起
+   ◆ 扩容：负载率，加载因子0.75
+    • 新建翻倍长度新数组
+    • 所有数据重新hash放入新数组
+  ★ jdk1.8
+   ◆ 链表长度到8，转为红黑树
+   ◆ 数据减少到6，转回链表
+ ▪ Iterator 接口
+  ★ hashNext()
+  ★ next()
+  ★ remove()
+ ▪ Collections工具类
+  ★ addAll(),sort(),swap() ...
+• 异常
+ ▪ 继承结构
+  ★ Throwable
+   ◆ Error 系统级错误
+   ◆ Exception 可修复错误
+     • 其他Exception
+     • RuntimeException
+ ▪ throws (方法中)
+  ★ 管道
+  ★ RuntimeException 有默认管道
+  ★ 其他Exception,手动添加管道
+ ▪ throw (代码中)
+  ★ 手动抛出异常
+ ▪ 异常包装
+  ★ 不能抛出异常包装成能抛出的异常
+  ★ 异常简化
+  ★ 自定义异常
+• IO
+ ▪ File
+  ★ 封装磁盘路径
+  ★ 属性
+  ★ 创建、删除
+  ★ 列表
+ ▪ RandomAccessFile
+  ★ 读写文件
+  ★ 任意定位,读写文件
+  ★ new RandomAccessFile(文件,"r")
+  ★ new RandomAccessFile(文件,"rw")
+  ★ read()
+  ★ seek()
+ ▪ InputStream()/OutputStream()
+  ★ 直接插在文件上
+ ▪ BufferInputStream/BufferOutputStream
+ ▪ ObjectInputStream/ObjectOutputStream
+  ★ 序列化，反序列化
+  ★ writeObject()
+  ★ readObject()
+  ★ 被序列化的对象,必须实现Serializable接口
+  ★ 序列化版本
