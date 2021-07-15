@@ -1,4 +1,4 @@
-package com.zx.springboot.licode.list;
+package com.zx.springboot.leetcode;
 
 
 import java.util.Arrays;

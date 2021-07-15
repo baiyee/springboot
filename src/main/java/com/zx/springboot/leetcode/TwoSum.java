@@ -1,7 +1,7 @@
-package com.zx.springboot.licode.list;
+package com.zx.springboot.leetcode;
 
 /**
- * @description: TODO 求两数之和，使用暴力双重遍历  
+ * @description: TODO 求两数之和，使用暴力双重遍历
  * @date 2021/7/14
  * @author zhangxuan
  */
