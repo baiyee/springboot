@@ -3,7 +3,7 @@ package com.zx.springboot.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.zx.springboot.dto.request.VersoinRequest;
-import com.zx.springboot.model.Version;
+import com.zx.springboot.entity.Version;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

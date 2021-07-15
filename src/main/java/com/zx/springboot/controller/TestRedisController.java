@@ -1,6 +1,6 @@
 package com.zx.springboot.controller;
 
-import com.zx.springboot.entity.RedisModel;
+import com.zx.springboot.model.RedisModel;
 import com.zx.springboot.service.IRedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;

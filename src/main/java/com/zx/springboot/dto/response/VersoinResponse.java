@@ -2,7 +2,7 @@ package com.zx.springboot.dto.response;
 
 
 import com.zx.springboot.dto.request.VersoinRequest;
-import com.zx.springboot.model.Page;
+import com.zx.springboot.entity.Page;
 
 import java.util.List;
 

@@ -2,8 +2,8 @@ package com.zx.springboot.controller;
 
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.zx.springboot.entity.User;
 import com.zx.springboot.mapper.UserMapper;
-import com.zx.springboot.model.User;
 import com.zx.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

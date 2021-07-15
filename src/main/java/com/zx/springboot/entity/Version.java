@@ -1,4 +1,4 @@
-package com.zx.springboot.model;
+package com.zx.springboot.entity;
 
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;

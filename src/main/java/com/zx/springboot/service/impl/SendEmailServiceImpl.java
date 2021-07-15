@@ -1,6 +1,6 @@
 package com.zx.springboot.service.impl;
 
-import com.zx.springboot.model.Mail;
+import com.zx.springboot.entity.Mail;
 import com.zx.springboot.service.SendEmailService;
 import com.zx.springboot.uitl.MailUtil;
 import org.springframework.stereotype.Service;

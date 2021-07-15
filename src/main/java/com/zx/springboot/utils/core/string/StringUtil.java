@@ -30,4 +30,13 @@ public class StringUtil {
         StringBuilder sb = new StringBuilder(oldSubString);
         return sb.append(replaceStr).toString();
     }
+
+
+    public static boolean isNullEmpty(String text) {
+        if (null == text) {
+            return true;
+        } else {
+            return 0 == text.trim().length();
+        }
+    }
 }

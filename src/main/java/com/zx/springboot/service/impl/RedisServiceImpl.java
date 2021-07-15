@@ -1,6 +1,6 @@
 package com.zx.springboot.service.impl;
 
-import com.zx.springboot.entity.RedisModel;
+import com.zx.springboot.model.RedisModel;
 import com.zx.springboot.service.IRedisService;
 import org.springframework.stereotype.Service;
 

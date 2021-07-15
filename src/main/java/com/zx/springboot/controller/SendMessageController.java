@@ -1,7 +1,7 @@
 package com.zx.springboot.controller;
 
 import com.zx.springboot.dto.response.WebApiResponse;
-import com.zx.springboot.model.Mail;
+import com.zx.springboot.entity.Mail;
 import com.zx.springboot.service.SendEmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.zx.springboot.entity;
+package com.zx.springboot.model;
 
 public  class Parent {
     public String say() {

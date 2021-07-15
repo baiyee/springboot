@@ -1,4 +1,4 @@
-package com.zx.springboot.model;
+package com.zx.springboot.entity;
 
 import lombok.Data;
 import lombok.ToString;

@@ -1,4 +1,4 @@
-package com.zx.springboot.model;
+package com.zx.springboot.entity;
 /**
  * 分页Model
  * 

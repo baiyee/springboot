@@ -3,7 +3,7 @@ package com.zx.springboot.service;
 import com.baomidou.mybatisplus.service.IService;
 import com.zx.springboot.dto.request.VersoinRequest;
 import com.zx.springboot.dto.response.VersoinResponse;
-import com.zx.springboot.model.Version;
+import com.zx.springboot.entity.Version;
 
 /**
  * <p>

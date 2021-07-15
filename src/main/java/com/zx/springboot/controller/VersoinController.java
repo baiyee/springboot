@@ -7,7 +7,7 @@ import com.zx.springboot.dto.request.GetVersoinRequest;
 import com.zx.springboot.dto.request.VersoinRequest;
 import com.zx.springboot.dto.response.ReturnMessage;
 import com.zx.springboot.dto.response.VersoinResponse;
-import com.zx.springboot.model.Version;
+import com.zx.springboot.entity.Version;
 import com.zx.springboot.service.VersoinService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;

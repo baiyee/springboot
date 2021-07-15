@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zx.springboot.mapper.VersoinMapper">
 
-    <select id="searchVersoinInfoWithSystem" resultType="com.zx.springboot.model.Version" parameterType="java.lang.String">
+    <select id="searchVersoinInfoWithSystem" resultType="com.zx.springboot.entity.Version" parameterType="java.lang.String">
       SELECT id,coinTypeVersion,version,system,isforce,description,url,packageSize,updateDate,content,updateUrl FROM tb_versoin WHERE system = #{system} limit 1
     </select>
 
@@ -11,7 +11,7 @@
 		set v.coinTypeVersion = v.coinTypeVersion+1
 	</update>
 
-    <update id="updateVersoin" parameterType="com.zx.springboot.model.Version">
+    <update id="updateVersoin" parameterType="com.zx.springboot.entity.Version">
         update tb_versoin v
         set
         <if test="coinTypeVersion != null">

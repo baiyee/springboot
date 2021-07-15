@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zx.springboot.mapper.VersoinLanguageMapper">
 
-    <insert id="insertLanguage" parameterType="com.zx.springboot.model.VersoinLanguage">
+    <insert id="insertLanguage" parameterType="com.zx.springboot.entity.VersoinLanguage">
       insert into tb_versoin_language (versoinId,  description,  content,  `locale`)
       values(#{versoinId},#{description},#{content},#{locale})
     </insert>

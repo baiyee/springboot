@@ -1,5 +1,6 @@
 package com.zx.springboot.service;
-import com.zx.springboot.model.Mail;
+
+import com.zx.springboot.entity.Mail;
 
 /**
  * SendEmailService(描述其作用)

@@ -2,7 +2,7 @@ package com.zx.springboot.mapper;
 
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
-import com.zx.springboot.model.VersoinLanguage;
+import com.zx.springboot.entity.VersoinLanguage;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
