@@ -1,4 +1,4 @@
-package com.zx.springboot.lambda.refactor;
+package com.zx.springboot.lambda.stream;
 
 import net.sf.ezmorph.test.ArrayAssertions;
 

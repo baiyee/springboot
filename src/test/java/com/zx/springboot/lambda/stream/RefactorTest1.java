@@ -1,4 +1,4 @@
-package com.zx.springboot.lambda.refactor;
+package com.zx.springboot.lambda.stream;
 
 import java.util.HashSet;
 import java.util.List;
