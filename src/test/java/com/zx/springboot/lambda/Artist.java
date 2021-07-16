@@ -1,4 +1,4 @@
-package com.zx.springboot.lambda.stream;
+package com.zx.springboot.lambda;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

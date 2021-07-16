@@ -1,4 +1,4 @@
-package com.zx.springboot.lambda.stream;
+package com.zx.springboot.lambda;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-class Track {
+public class Track {
     /**曲目名称 eg: 《黄色潜水艇》*/
     String name;
     /**曲目时长 eg: 5分钟*/

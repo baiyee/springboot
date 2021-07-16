@@ -1,4 +1,4 @@
-package com.zx.springboot.lambda.stream;
+package com.zx.springboot.lambda;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,7 +14,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-class Album {
+public class Album {
     /**专辑名 eg: 《寻物启事》》*/
     private String name;
     /**专辑上所有曲目的列表 eg: 《叹服》《灰色头像》*/
